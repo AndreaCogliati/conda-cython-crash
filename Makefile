@@ -1,7 +1,5 @@
-
 # For CONDA
 PYTHON := python3
-MKLDIR := ~/anaconda3/lib
 
 # For MacPorts use the following
 # PYTHON := /opt/local/bin/python3.7
@@ -36,4 +34,5 @@ clean:
 
 .PHONY: test
 test: build
-	LD_PRELOAD=$(MKLDIR)/libmkl_core.so:$(MKLDIR)/libmkl_sequential.so LD_LIBRARY_PATH=$(INTELDIR):$(MKLDIR) $(PYTHON) test.py
+	# LD_PRELOAD=$(MKLDIR)/libmkl_core.so:$(MKLDIR)/libmkl_sequential.so LD_LIBRARY_PATH=$(INTELDIR):$(MKLDIR) $(PYTHON) test.py
+	$(PYTHON) test.py
