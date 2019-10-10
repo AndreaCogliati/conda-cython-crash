@@ -34,5 +34,4 @@ clean:
 
 .PHONY: test
 test: build
-	# LD_PRELOAD=$(MKLDIR)/libmkl_core.so:$(MKLDIR)/libmkl_sequential.so LD_LIBRARY_PATH=$(INTELDIR):$(MKLDIR) $(PYTHON) test.py
 	$(PYTHON) test.py
